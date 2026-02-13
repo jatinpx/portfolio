@@ -1,0 +1,9 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" rx="40" fill="#0F172A"/>
+  <rect x="110" y="120" width="580" height="360" rx="30" fill="#1E293B"/>
+  <circle cx="260" cy="290" r="70" fill="#F59E0B" fill-opacity="0.3"/>
+  <circle cx="540" cy="320" r="90" fill="#22D3EE" fill-opacity="0.25"/>
+  <text x="150" y="200" fill="#E2E8F0" font-family="Arial" font-size="28" letter-spacing="4">BLOGRR</text>
+  <text x="150" y="235" fill="#94A3B8" font-family="Arial" font-size="14" letter-spacing="3">FULL-STACK BLOG PLATFORM</text>
+  <path d="M220 420H580" stroke="#F8FAFC" stroke-opacity="0.4" stroke-width="6" stroke-linecap="round"/>
+</svg>

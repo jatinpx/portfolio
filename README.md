@@ -2,9 +2,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
 # or
 yarn dev
@@ -15,6 +16,26 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Contact Form (EmailJS)
+
+Create a `.env.local` file in the project root and add your EmailJS keys:
+
+```bash
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+NEXT_PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE_ID=your_autoreply_template_id
+```
+
+The EmailJS template should include these variables:
+
+- `from_name`
+- `from_email`
+- `message`
+- `to_email`
+
+For auto-reply, use the same variables. Set `to_email` to the sender address.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 

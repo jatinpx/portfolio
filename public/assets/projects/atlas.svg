@@ -1,0 +1,20 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" rx="40" fill="#0B1120"/>
+  <rect x="70" y="80" width="660" height="440" rx="28" fill="#111827" stroke="#1E293B" stroke-width="2"/>
+  <circle cx="200" cy="220" r="120" fill="url(#paint0_radial)"/>
+  <circle cx="600" cy="360" r="160" fill="url(#paint1_radial)"/>
+  <path d="M140 360C220 280 320 250 420 280C520 310 620 390 680 450" stroke="#2DD4BF" stroke-width="10" stroke-linecap="round"/>
+  <text x="110" y="160" fill="#E2E8F0" font-family="Arial" font-size="28" letter-spacing="4">BLOCKCHAIN-BASED</text>
+  <text x="110" y="200" fill="#E2E8F0" font-family="Arial" font-size="28" letter-spacing="4">VOTING SYSTEM</text>
+  <text x="110" y="250" fill="#94A3B8" font-family="Arial" font-size="14" letter-spacing="3">TRANSPARENT • TRUSTED • SECURE</text>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 220) rotate(90) scale(120)">
+      <stop stop-color="#38BDF8" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0B1120" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 360) rotate(90) scale(160)">
+      <stop stop-color="#FDE68A" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#0B1120" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

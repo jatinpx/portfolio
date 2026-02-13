@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+:root {
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+  --muted: 241 245 249;
+  --muted-foreground: 100 116 139;
+  --card: 255 255 255;
+  --border: 226 232 240;
+  --accent: 255 236 211;
+  --accent-foreground: 111 63 0;
+  --brand: 17 94 89;
+  --brand-foreground: 240 253 250;
+  --ring: 15 23 42;
+  --radius: 18px;
+  color-scheme: light;
+}
+
+.dark {
+  --background: 0 0 0;
+  --foreground: 226 232 240;
+  --muted: 15 23 42;
+  --muted-foreground: 148 163 184;
+  --card: 10 14 20;
+  --border: 30 41 59;
+  --accent: 30 20 8;
+  --accent-foreground: 255 225 191;
+  --brand: 45 212 191;
+  --brand-foreground: 4 47 46;
+  --ring: 148 163 184;
+  color-scheme: dark;
+}
+
+.sand {
+  --background: 248 242 233;
+  --foreground: 60 47 36;
+  --muted: 241 232 219;
+  --muted-foreground: 120 94 71;
+  --card: 252 248 241;
+  --border: 228 212 192;
+  --accent: 255 228 196;
+  --accent-foreground: 107 66 32;
+  --brand: 176 118 69;
+  --brand-foreground: 255 250 244;
+  --ring: 120 94 71;
+  color-scheme: light;
+}
+
+.ocean {
+  --background: 241 248 255;
+  --foreground: 12 32 51;
+  --muted: 226 240 250;
+  --muted-foreground: 55 101 141;
+  --card: 250 253 255;
+  --border: 198 222 242;
+  --accent: 207 238 255;
+  --accent-foreground: 16 76 118;
+  --brand: 14 116 144;
+  --brand-foreground: 236 254 255;
+  --ring: 55 101 141;
+  color-scheme: light;
+}
+
+.forest {
+  --background: 241 247 242;
+  --foreground: 20 38 26;
+  --muted: 226 238 229;
+  --muted-foreground: 72 110 86;
+  --card: 250 253 250;
+  --border: 198 220 202;
+  --accent: 216 240 222;
+  --accent-foreground: 33 92 60;
+  --brand: 22 117 74;
+  --brand-foreground: 236 253 245;
+  --ring: 72 110 86;
+  color-scheme: light;
+}
+
+.rose {
+  --background: 255 245 248;
+  --foreground: 59 25 43;
+  --muted: 245 231 237;
+  --muted-foreground: 123 77 98;
+  --card: 255 251 253;
+  --border: 232 205 215;
+  --accent: 255 224 235;
+  --accent-foreground: 123 34 63;
+  --brand: 200 71 107;
+  --brand-foreground: 255 241 246;
+  --ring: 123 77 98;
+  color-scheme: light;
+}
+
+.slate {
+  --background: 244 246 249;
+  --foreground: 15 23 42;
+  --muted: 230 234 241;
+  --muted-foreground: 71 85 105;
+  --card: 249 250 252;
+  --border: 200 210 224;
+  --accent: 219 227 240;
+  --accent-foreground: 30 41 59;
+  --brand: 59 78 118;
+  --brand-foreground: 239 246 255;
+  --ring: 71 85 105;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-card: rgb(var(--card));
+  --color-border: rgb(var(--border));
+  --color-accent: rgb(var(--accent));
+  --color-accent-foreground: rgb(var(--accent-foreground));
+  --color-brand: rgb(var(--brand));
+  --color-brand-foreground: rgb(var(--brand-foreground));
+  --color-ring: rgb(var(--ring));
+  --radius-lg: var(--radius);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .surface-gradient {
+    background: radial-gradient(
+        circle at top right,
+        rgba(45, 212, 191, 0.12),
+        transparent 45%
+      ),
+      radial-gradient(
+        circle at 20% 20%,
+        rgba(255, 236, 211, 0.7),
+        transparent 55%
+      );
+  }
+
+  .dark .surface-gradient {
+    background: rgb(0 0 0);
+  }
+
+  .glass {
+    @apply border border-border/70 bg-card/70 backdrop-blur-xl;
+  }
+
+  .section-padding {
+    @apply px-6 sm:px-10 lg:px-16;
+  }
+
+  .display-text {
+    font-family: var(--font-display), serif;
+    letter-spacing: -0.02em;
+  }
+
+  .marquee {
+    display: flex;
+    gap: 1.5rem;
+    white-space: nowrap;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .marquee-wrap:hover .marquee {
+    animation-play-state: paused;
+  }
+
+  .marquee-wrap::before,
+  .marquee-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 96px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .marquee-wrap::before {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      rgba(var(--background), 1),
+      rgba(var(--background), 0)
+    );
+  }
+
+  .marquee-wrap::after {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgba(var(--background), 1),
+      rgba(var(--background), 0)
+    );
+  }
+
+  .page-shell {
+    transition: transform 0.9s ease, opacity 0.9s ease;
+    will-change: transform, opacity;
+  }
+
+  .intro-active .page-shell {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(60px);
+  }
+
+  .intro-active,
+  .intro-active body {
+    overflow: hidden;
+  }
+
+  .intro-exit .page-shell {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .marquee {
+      animation-duration: 18s;
+    }
+  }
+}
