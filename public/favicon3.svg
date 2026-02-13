@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- third creative favicon: red background with overlapping JP letters -->
+  <rect width="64" height="64" fill="#DC2626" />
+  <g font-family="Verdana, Geneva, sans-serif" font-size="40" fill="#fff" text-anchor="middle" dominant-baseline="central">
+    <text x="32" y="36" transform="rotate(-15 32 32)">J</text>
+    <text x="34" y="28" transform="rotate(15 32 32)">P</text>
+  </g>
+</svg>
